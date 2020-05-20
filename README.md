@@ -1,4 +1,3 @@
 # Diploma
-Blockchain-diploma, acmp
 
-A simple plasma Dapp implementation.
+Сегментация изображений документов, содержащих текстовую и графическую информацию.
