@@ -5,6 +5,12 @@ from pythonRLSA import rlsa
 
 def get_roi(image):
 
+    """ Возвращает координаты вершин прямоугольников, содержащих области интереса на изображении
+        Аргумент image: ndarray - изображение
+        Возвращает coordinates: list<list> - список списков формата [x0, x1, y0, y1]
+                   roi: list<ndarray> - список изображений блоков контента
+    """
+    
     ret, bin_image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
     horizontal_smoothed_image = rlsa.rlsa(bin_image, True, False, 16)
